@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" class="lgn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header" data-header>
+        <div class="container">
+            <a href="index.html" class="logo">Go Back</a>
+            <nav class="navbar" data-navbar>
+                <ul class="navbar-list">
+                    <li><a href="index.html" class="navbar-link">Home</a></li>
+                    <li><a href="about.html" class="navbar-link">About Us</a></li>
+                    <li><a href="services.html" class="navbar-link">Services</a></li>
+                    <li><a href="pricing.html" class="navbar-link">Pricing</a></li>
+                    <li><a href="faq.html" class="navbar-link">FAQ</a></li>
+                    <li><a href="contact.html" class="navbar-link">Contact Us</a></li>
+                    <li><a href="login.html" class="navbar-link">Login</a></li>
+                </ul>
+                <button class="nav-toggler" data-nav-toggler>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
+            </nav>
+            <div class="overlay" data-overlay></div>
+        </div>
+    </header>
+
+    <main>
+        <section class="login-section">
+            <div class="container">
+                <h1 class="section-title">Login</h1>
+                <form class="login-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="login-button">Login</button>
+                    <p class="signup-link">Don't have an account? <a href="signup.html">Sign up</a></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

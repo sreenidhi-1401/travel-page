@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Now</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lavenderblush;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        select,
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .success-message {
+            text-align: center;
+            background-color: #dff0d8;
+            color: #3c763d;
+            border: 1px solid #d6e9c6;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Book Your Tour Now</h1>
+        <form id="booking-form" action="#">
+            <label for="destination">Select Destination:</label>
+            <select id="destination" name="destination">
+                <option value="rome">Rome</option>
+                <option value="lucknow">Lucknow</option>
+                <option value="dubai">Dubai</option>
+                <option value="maldives">Maldives</option>
+                <option value="thailand">Thailand</option>
+                <option value="turkey">Turkey</option>
+            </select>
+
+            <label for="price">Price:</label>
+            <input type="text" id="price" name="price" readonly>
+
+            <input type="submit" value="Book Now">
+        </form>
+
+        <div class="success-message" id="success-message" style="display: none;">
+            Thank you for confirming! Please pay the exact amount to the tour guide.
+        </div>
+    </div>
+
+    <script>
+        const destinationSelect = document.getElementById('destination');
+        const priceInput = document.getElementById('price');
+        const bookingForm = document.getElementById('booking-form');
+        const successMessage = document.getElementById('success-message');
+
+        // Price data for destinations
+        const destinationPrices = {
+            rome: '$340',
+            lucknow: '$240',
+            dubai: '$560',
+            maldives: '$160',
+            thailand: '$323',
+            turkey:'$278',
+            
+        };
+
+        // Update price based on selected destination
+        destinationSelect.addEventListener('change', () => {
+            const selectedDestination = destinationSelect.value;
+            priceInput.value = destinationPrices[selectedDestination];
+        });
+
+        // Form submission handler
+        bookingForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            // Here you can add code to handle form submission,
+            // like sending data to a server or showing a success message.
+            // For now, we just show the success message.
+            successMessage.style.display = 'block';
+            bookingForm.reset(); // Reset the form
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" class="ctn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header" data-header>
+        <div class="container">
+            <a href="index.html" class="logo">Travel India</a>
+            <nav class="navbar" data-navbar>
+                <ul class="navbar-list">
+                    <li><a href="index.html" class="navbar-link">Home</a></li>
+                    <li><a href="about.html" class="navbar-link">About Us</a></li>
+                    <li><a href="services.html" class="navbar-link">Services</a></li>
+                    <li><a href="pricing.html" class="navbar-link">Pricing</a></li>
+                    <li><a href="faq.html" class="navbar-link">FAQ</a></li>
+                    <li><a href="contact.html" class="navbar-link">Contact Us</a></li>
+                </ul>
+                <button class="nav-toggler" data-nav-toggler>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
+            </nav>
+            <div class="overlay" data-overlay></div>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <div class="container">
+                <h1 class="section-title">Contact Us</h1>
+                <div class="contact-container">
+                    <form class="contact-form" action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="contact-button">Send Message</button>
+                    </form>
+                    <div class="contact-info">
+                        <h2>Our Address</h2>
+                        <p>1234 Street, Mumbai, Maharashtra, 56789</p>
+                        <h2>Email</h2>
+                        <p>info@travelindia.com</p>
+                        <h2>Phone</h2>
+                        <p>(123) 456-7890</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
